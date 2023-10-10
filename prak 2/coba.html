@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contoh CV</title>
+        <link rel="stylesheet" href="styles.css">
+    
+    </head>
+    <body>
+        <div class="container">
+            <header class="head">
+                <img src="iamge.JPG" alt="gambar raja" class="gambar">
+
+                <div class="side">
+                    <h2>Harun Abdulkarim Khafid</h2>
+                    <h4>suka ngoding, suka olahraga, suka kamu</h4>
+                </div>
+            </header>
+            <nav class="navbar">
+                <li class="menu"><a href="#">beranda</a></li>
+                <li class="menu"><a href="#">profil</a></li>
+                <li class="menu"><a href="#">kontak</a></li>
+            </nav>
+            
+            <section class="tentang">
+                <h2>About me</h2>
+                <h7>Halo! Nama saya Harun Abdulkarim, tapi Anda bisa memanggil saya Harun. 
+                    Saya berusia 20 tahun dan saat ini sedang menempuh studi di Program Studi Teknik Informatika. 
+                    Saya memiliki berbagai hobi, termasuk olahraga, bermain game, dan tentu saja, ngoding. Saya sangat 
+                    tertarik pada dunia teknologi dan komputer, dan senang dapat menggabungkan hobi-hobi saya dengan studi 
+                    di bidang ini. Jika Anda ingin berbicara tentang olahraga, permainan, atau bahkan berbagi ide tentang 
+                    pengembangan perangkat lunak, saya selalu siap untuk berdiskusi!</h7>
+                <div>
+                    <video src="clip.mp4" controls></video> 
+                </div>
+                    <P>ini merupakan clip (bukan saya) flick yang cukup biasa saja</P>
+            </section>
+
+            <section class="pengalaman">
+                <h2>Pengalaman</h2>
+                <table class="tbl" border="2" align="center">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">no</th>
+                            <th rowspan="2">posisi</th>
+                            <th rowspan="2">perusahaan</th>
+                            <th colspan="2">waktu</th>
+                            
+                        </tr>
+                        <tr>
+                            <th>mulai</th>
+                            <th>selesai</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>sekretaris</td>
+                            <td>Rohis</td>
+                            <td>Kelas 11</td>
+                            <td>Kelas 12</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Asisten Praktikum PKS 2</td>
+                            <td>itera</td>
+                            <td>awal semester 4</td>
+                            <td>akhir semester 4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="tambah">
+                <form action="jawaban.php" method="post">
+                    <h2>kontak saya!</h2>
+                    <label for="email">email :</label> 
+                    <input type="text" placeholder="masukkan" id="email"> 
+                    <p>apakah bumi itu bulat?</p>
+                    <input type="radio" name="soal_b"> iya
+                    <input type="radio" name="soal_b"> no
+                    <h2>apakah web ini sudah bagus?</h2>
+                    <input type="checkbox" name="a" id="a"> biasa saja <br>
+                    <input type="checkbox" name="a" id="a"> bagus banget <br>
+                    <input type="checkbox" name="a" id="a"> pilih 2 <br>
+                    <button class="btn" type="submit" >submit</button>
+                </form>
+            </section>
+            <footer>
+                <p>Hak Cipta &copy; 2023 Contoh Halaman Web</p>
+            </footer>
+        </div>
+       
+    </body>
+</html>
