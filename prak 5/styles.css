@@ -1,0 +1,44 @@
+/* Harun Abdulkarim
+121140147
+RB */
+input {
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+.calculator {
+    text-align: right;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #bdb7b7;
+    padding: 20px;
+    
+    
+}
+
+.keys {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px 1px;
+}
+
+button {
+    font-size: large;
+    height: 50px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5f5f5e;
+    color: rgb(255, 255, 255);
+}
+button:hover{
+    background-color: #414140;
+}
+.result{
+    background-color: rgb(82, 184, 184);
+}
+.result:hover{
+    background-color: rgb(59, 131, 131);
+}
