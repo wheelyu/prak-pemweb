@@ -1,48 +1,52 @@
 <?php
-
-class Orang {
-    private $Nama;
-    public function setNama($Nama) {
+// Nama : Harun Abdulkarim Khafid
+// NIM : 121140147
+// RB
+class Orang {    // Membuat kelas parent
+    private $Nama; //properti
+             
+    public function setNama($Nama) {  // Setter untuk Nama dengan validasi menggunakan regular expression
         $regex = "/^[a-zA-Z\s]+$/";
         if(!preg_match($regex, $Nama)) {
-            throw new Exception("Inputan Hanya Boleh Huruf dan Spasi");
+            throw new Exception("Inputan tidak boleh menggunakan simbol");
         }
         $this->Nama = $Nama;
     }
-    public function getNama() {
+    public function getNama() {    //getter untuk nama
         return $this->Nama;
     }
 }
 
-class identitas extends Orang {
+class identitas extends Orang { //kelas turunan
+    //properti
     private $umur;
     private $alamat;
     private $pekerjaan;
-    public function __construct($nama,$umur,$alamat,$pekerjaan) {
-        parent::setNama($nama);
+    public function __construct($nama,$umur,$alamat,$pekerjaan) { //konstruktor untuk inisialisasi objek identitas
+        parent::setNama($nama);    //menggunakan setter dari kelas parent
         $this->umur = $umur;
         $this->alamat = $alamat;
         $this->pekerjaan = $pekerjaan;
     }
-    public function setUmur($umur) {
+    public function setUmur($umur) { //setter untuk umur
         $this->umur = $umur;
     }
-    public function getUmur() {
+    public function getUmur() {    //getter untuk umur
         return $this->umur;
     }
-    public function setAlamat($alamat) {
+    public function setAlamat($alamat) {    //setter untuk alamat
         $this->alamat = $alamat;
     }
-    public function getAlamat() {
+    public function getAlamat() {    //getter untuk alamat
         return $this->alamat;
     }
-    public function setPekerjaan($pekerjaan) {
+    public function setPekerjaan($pekerjaan) {    //setter untuk pekerjaan
         $this->pekerjaan = $pekerjaan;
     }
-    public function getPekerjaan() {
+    public function getPekerjaan() {    //getter untuk pekerjaan
         return $this->pekerjaan;
     }
-    public function displayInfo() {
+    public function displayInfo() {    //fungsi untuk menampilkan informasi
         echo "Nama: " . $this->getNama() . "<br>";
         echo "Umur: " . $this->getUmur() . "<br>";
         echo "Alamat: " . $this->getAlamat() . "<br>";
@@ -50,15 +54,16 @@ class identitas extends Orang {
     }
     }
 
-
+//membuat objek identtias
 $Orang1 = new Identitas("Harun Abdulkarim Khafid", 20, "Belwis", "Mahasiswa");
 
 echo "data lama:<br>";
-$Orang1->displayInfo();
+$Orang1->displayInfo();    //menampilkan data dari objek
 
-$Orang1->setPekerjaan("Programmer");
+$Orang1->setPekerjaan("Programmer");    //mengubah pekerjaan dan menampilkan info terbaru
 echo "<br>info terbaru:<br>";
 $Orang1->displayInfo();
+//percobaan mengubah nama dengan inputan tidak valid
 try{
     $Orang1->setNama("harun@gmail.com");
     $Orang1->displayInfo();
